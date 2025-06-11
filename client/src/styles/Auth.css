@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+
+@font-face {
+  font-family: 'LOTTERIACHAB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.adlam-display-regular {
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #bfecb0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 2rem; */
+}
+
+.auth-logo {
+  width: 300px;
+  margin-bottom: 3.4rem;
+  margin-top: 4.8rem;
+}
+
+.auth-form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-form-container h1 {
+  font-family: 'ADLaM Display';
+  color: #6AC04D;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #F8F8F8;
+  border: 2px solid #E0E0E0;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.input-group .material-symbols-outlined {
+  color: #6AC04D;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+.auth-submit {
+  background-color: #ffc916;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: 'ADLaM Display';
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  
+  &:hover {
+    background-color: #ffefbb;
+  }
+}
+
+.auth-switch {
+  background: none;
+  border: none;
+  color: #6AC04D;
+  font-family: 'ADLaM Display';
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-decoration: underline;
+} 

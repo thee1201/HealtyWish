@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  background-color: #fff0be;
+  background-image: url('../assets/startbackground.svg');
+  background-size: 74%;
+  background-repeat: no-repeat;
+  background-position: left;
+  position: relative;
+}
+
+.logo {
+  width: 30%;
+  height: 20%;
+  margin-bottom: 40px;
+  position: absolute;
+  top: 60px;
+  left: 110px;
+}
+
+.salad {
+  width: 600px;
+  max-width: 90%;
+  margin: 20px 0 40px;
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+  rotate: 40deg;
+}
+
+.start-btn {
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 80px 20px 80px;
+  font-size: 5rem;
+  font-family: 'LOTTERIACHAB';
+  color: #ffc916;
+  cursor: pointer;
+  transition: transform 0.2s;
+  align-self: center;
+  position: absolute;
+  right: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    background-color: #ffc916;
+    color: white;
+  }
+}
