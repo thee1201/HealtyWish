@@ -12,7 +12,7 @@
 
 ## 기술 스택
 
-- **프론트엔드**: React (Vite), Tailwind CSS
+- **프론트엔드**: React (Vite), CSS
 - **백엔드**: Node.js, Express
 - **데이터베이스**: PostgreSQL
 - **실시간 통신**: Socket.IO
