@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const pg = require('pg');
 const bcrypt = require('bcrypt');
@@ -6,6 +9,9 @@ const cors = require('cors');
 const http = require('http');
 const {Server} = require('socket.io');
 
+const CLIENT_URL = process.env.CLIENT_URL;
+const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
+
 const app = express();
 
 const port = 3000;
@@ -13,7 +19,7 @@ const socketPort = 3001;
 
 // CORS 설정
 app.use(cors({
-  origin: 'http://203.234.62.112:5173', // Vite 기본 포트
+  origin: CLIENT_URL,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -26,7 +32,7 @@ app.use(express.json());
 const client = new pg.Pool({
   host: 'localhost',
   user: 'postgres',
-  password: '041201',
+  password: DATABASE_PASSWORD,
   database: 'HealthyWish',
   port: 5432,
   max: 5,
@@ -37,7 +43,7 @@ const client = new pg.Pool({
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://203.234.62.112:5173',
+    origin: CLIENT_URL,
     methods: ['GET', 'POST'],
   }
 });
