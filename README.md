@@ -42,12 +42,12 @@ const client = new pg.Pool({
 
 | 테이블명            | 주요 컬럼                                                     | 설명                     |
 | --------------- | --------------------------------------------------------- | ---------------------- |
-| `user`          | `userID`, `username`, `password`                          | 사용자 정보 저장              |
+| `users`          | `userID`, `username`, `password`                          | 사용자 정보 저장              |
 | `posts`         | `postID`, `userID`, `title`, `contents`, `uploaddate`     | 게시글 정보 (작성자와 연결)       |
 | `comments`      | `commentID`, `postID`, `userID`, `contents`, `uploaddate` | 댓글 정보 (게시글 & 작성자 연결)   |
 | `like_posts`    | `userID`, `postID`                                        | 게시글 좋아요 (복합 PK로 중복 방지) |
 | `chat_rooms`    | `roomID`, `groupname`, `isgroup`                          | 채팅방 정보 (그룹/1:1 여부 포함)  |
-| `room_members`  | `userID`, `chatroomID`                                    | 채팅방 참여자 (M\:N 관계)      |
+| `room_members`  | `userID`, `roomID`                                    | 채팅방 참여자 (M\:N 관계)      |
 | `chat_messages` | `messageID`, `roomID`, `userID`, `message`, `timestamp`   | 채팅 메시지 정보              |
 
 ### 2. 서버 실행
